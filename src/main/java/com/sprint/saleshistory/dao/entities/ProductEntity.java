@@ -1,9 +1,12 @@
-package com.sprint.saleshistory.models;
+package com.sprint.saleshistory.dao.entities;
 
 import java.time.LocalDate;
 
-import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters.LocalDateConverter;
+import org.antlr.v4.runtime.misc.NotNull;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,8 +18,13 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class ProductsPoJo {
+@Entity
+public class ProductEntity {
+	
+	@Id
 	private int prodId;
+	
+	@Column(length = 50, nullable = false)
 	private String prodName;
 	private String prodDesc;
 	private String prodSubcategory;
@@ -42,4 +50,5 @@ public class ProductsPoJo {
 	
 	
 	
+
 }
