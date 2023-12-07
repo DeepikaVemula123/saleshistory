@@ -9,5 +9,4 @@ public class SaleshistoryApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SaleshistoryApplication.class, args);
 	}
-
-}
+	}
